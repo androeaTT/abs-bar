@@ -1,0 +1,6 @@
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+cd $SCRIPT_DIR
+ags bundle app.jsx abs-bar -r .
+cp ./data -r ~/.local/share/abs-bar
+mv ./abs-bar ~/.local/bin/abs-bar
+abs-bar $* 

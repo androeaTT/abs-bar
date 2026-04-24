@@ -1,0 +1,69 @@
+:root{
+    --accent: #3a944a;
+    --bg: transparent; 
+    --bg-blur: #4444445e; 
+}
+*{
+    box-shadow:none;
+}
+button, menubutton{
+    color: #fff;
+}
+window{
+    background: transparent;
+}
+.main-content{
+    min-height: 48px;
+    background-color: transparent;
+    transition: opacity linear 100ms;
+    opacity: 1;
+}
+.main-content.hidden{
+    opacity: 0;
+}
+.card{
+    background-color: var(--bg-blur);
+    margin: 7px;
+    border-radius: 25px;
+    transition: border-radius ease-in-out 250ms;
+}
+.card-suggested{
+    background-color: var(--accent);
+    border-radius: 25px;
+}
+.card-con-left{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 1.5px;
+}
+.card-con-right{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-right: 1.5px;
+}
+
+.cava-piece{
+    background-color: #fff;
+    border-radius: 2px;
+    min-height: 2px;
+}
+
+.clock{
+    font-size: x-large;
+    font-weight: normal;
+    padding: 5px 10px 5px 10px;
+}
+
+.line-separator{
+    min-width: 1px;
+    background-color: #ffffff18;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.workspace-pointer{
+    background-color: #fff;
+    border-radius: 2px 2px 0 0;
+}
+.workspace-cords-area{
+    border-radius: 25px;
+}
