@@ -43,7 +43,7 @@ function HyprWorkspaces({gdkmonitor, inState}) {
 
 
     return ( 
-        <Card classes="card linked">
+        <Card>
             <overlay>
                 <box class="linked" orientation={Gtk.Orientation.HORIZONTAL}>
                     <For each={workspaces}>

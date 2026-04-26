@@ -33,9 +33,9 @@ function CenterWindow({children, gdkmonitor, inState}) {
     }
 
     const window = (
-        <window namespace={config.NAMESPACE} gdkmonitor={gdkmonitor} layer={winLayer} exclusivity={config.EXCLUSIVITY} visible anchor={config.VANCHOR}>
-            <box class={isOpaque((e) => e ? "main-content hidden" : "main-content")} orientation={Gtk.Orientation.HORIZONTAL}>
-                <box hexpand={true} class="center" halign={Gtk.Align.CENTER} orientation={Gtk.Orientation.HORIZONTAL}>    
+        <window namespace={config.NAMESPACE} gdkmonitor={gdkmonitor} overflow={Gtk.Overflow.HIDDEN} layer={winLayer} exclusivity={config.EXCLUSIVITY} visible anchor={config.VANCHOR}>
+            <box class={isOpaque((e) => e ? "main-content hidden" : "main-content")} overflow={Gtk.Overflow.HIDDEN} halign={Gtk.Align.CENTER} orientation={Gtk.Orientation.HORIZONTAL}>
+                <box hexpand={true} class="center" halign={Gtk.Align.CENTER} overflow={Gtk.Overflow.HIDDEN} orientation={Gtk.Orientation.HORIZONTAL}>    
                     {children}
                 </box>
             </box>

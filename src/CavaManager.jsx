@@ -52,7 +52,7 @@ class CavaManager extends GObject.Object {
                 hexpand={true}
                 revealChild={createBinding(this, "isSilence")((e) => !e)}
             >   
-                <Card classes={createBinding(this, "isSilence")((e) => e ? "card" : "card card-con-right")}>
+                <Card>
                     <box 
                         margin-start={4} 
                         width_request={102} 

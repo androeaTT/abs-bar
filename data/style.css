@@ -13,39 +13,29 @@ window{
     background: transparent;
 }
 .main-content{
-    min-height: 48px;
+    min-height: 34px;
     background-color: transparent;
     transition: opacity linear 100ms;
     opacity: 1;
+    border-radius: 99999px;
+    overflow: hidden;
+    margin: 7px;
 }
 .main-content.hidden{
     opacity: 0;
 }
-.card{
+.mcard{
     background-color: var(--bg-blur);
-    margin: 7px;
-    border-radius: 25px;
-    transition: border-radius ease-in-out 250ms;
-}
-.card-suggested{
-    background-color: var(--accent);
-    border-radius: 25px;
-}
-.card-con-left{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin-left: 1.5px;
-}
-.card-con-right{
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-right: 1.5px;
+    margin-left:    1.5px;
+    margin-right:   1.5px;
+    border-radius:  4px;
+    transition:     border-radius ease-in-out 250ms;
 }
 
 .cava-piece{
     background-color: #fff;
-    border-radius: 2px;
-    min-height: 2px;
+    border-radius:  2px;
+    min-height:     2px;
 }
 
 .clock{
@@ -63,7 +53,4 @@ window{
 .workspace-pointer{
     background-color: #fff;
     border-radius: 2px 2px 0 0;
-}
-.workspace-cords-area{
-    border-radius: 25px;
 }

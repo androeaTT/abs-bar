@@ -42,9 +42,7 @@ function BarInstance({gdkmonitor}) {
         </CenterWindow>,
         <RightWindow gdkmonitor={gdkmonitor}>
             {cavaManager.Widget}
-            <Card classes={ createBinding(cavaManager, "isSilence")( (e) => 
-                "linked card" + (e ? "" : " card-con-left")
-            )}>
+            <Card>
                 <Tray />
                 <Separator />
                 <NotificationsButton />
