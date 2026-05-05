@@ -64,3 +64,6 @@ popover arrow{
 .background {
     background-color: transparent;
 }
+.status-icon{
+    -gtk-icon-size: 14px;
+}

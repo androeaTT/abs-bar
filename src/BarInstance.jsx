@@ -4,7 +4,7 @@ Copyright (C) 2026  androeat (dimamazepa9@gmail.com)
 */
 import { exec } from "./utils.jsx"
 import { state } from "./GlobalStateManager.jsx"
-import { createBinding } from "ags"
+import { createBinding, jsx } from "ags"
 import Gtk from "gi://Gtk?version=4.0"
 import InstanceStateManager from "./InstanceStateManager.jsx"
 
@@ -20,6 +20,7 @@ import Clock from "./widgets/Clock.jsx"
 import NotificationsButton from "./widgets/NotificationButton.jsx"
 import Separator from "./widgets/Separator.jsx"
 import cavaManager from "./CavaManager.jsx"
+import StatusBar from "./widgets/StatusBar.jsx"
 import HyprWorkspaces from "./widgets/HyprWorkspaces.jsx"
 
 function BarInstance({gdkmonitor}) {
@@ -46,6 +47,8 @@ function BarInstance({gdkmonitor}) {
                 <Tray />
                 <Separator />
                 <NotificationsButton />
+                <Separator />
+                {jsx(StatusBar, {})}
                 <Separator />
                 <Clock />
             </Card>
