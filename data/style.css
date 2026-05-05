@@ -25,7 +25,6 @@ window{
 }
 .mcard{
     background-color: #4444445e;
-    background:     radial-gradient(circle at center, #4444445e 85%, #6f6f6f5e 100%);
     margin-left:    1.5px;
     margin-right:   1.5px;
     border-radius:  4px;
