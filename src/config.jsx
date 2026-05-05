@@ -19,6 +19,6 @@ const config = {
         "DP-3":     [10, 10]
     },
     IS_WORKSPACES_DYNAMIC:          false,
-    WORKSPACE_ON_CHANGING_LAYER:    Astal.Layer.TOP
+    SHOW_WORKSPACES_WHEN_CHANGING:  true,
 }
 export default config
