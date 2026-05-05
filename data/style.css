@@ -18,14 +18,14 @@ window{
     transition: opacity linear 100ms;
     opacity: 1;
     border-radius: 99999px;
-    overflow: hidden;
     margin: 7px;
 }
 .main-content.hidden{
     opacity: 0;
 }
 .mcard{
-    background-color: var(--bg-blur);
+    background-color: #4444445e;
+    background:     radial-gradient(circle at center, #4444445e 85%, #6f6f6f5e 100%);
     margin-left:    1.5px;
     margin-right:   1.5px;
     border-radius:  4px;
@@ -53,4 +53,15 @@ window{
 .workspace-pointer{
     background-color: #fff;
     border-radius: 2px 2px 0 0;
+}
+
+popover contents{
+    background: var(--bg-blur);
+}
+popover arrow{
+    background: var(--bg-blur);
+}
+
+.background {
+    background-color: transparent;
 }

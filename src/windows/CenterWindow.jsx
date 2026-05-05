@@ -11,19 +11,19 @@ import GLib from 'gi://GLib'
 import Gtk from "gi://Gtk?version=4.0"
 function CenterWindow({children, gdkmonitor, inState}) {
     const [isOpaque, setIsOpaque] = createState(false)
-    const [winLayer, setWinLayer] = createState(config.LAYER)
+    const [winLayer, changeLayerSilent] = createState(config.LAYER)
 
     const hypr = AHyprland.Hyprland.get_default()
 
 
     let timeoutId
-    function changeLayerTo(layer) {
+    function changeLayerAnimated(layer) {
         setIsOpaque(true)
         if (timeoutId) {
             GLib.source_remove(timeoutId)
         }
         timeoutId = GLib.timeout_add(GLib.PRIORITY_DEFAULT, 150, () => {
-            setWinLayer(layer)
+            changeLayerSilent(layer)
             setIsOpaque(false)
             
             
@@ -46,15 +46,15 @@ function CenterWindow({children, gdkmonitor, inState}) {
     state.isWorkspacesChangingBind.subscribe(() => {
         if (inState.isCurrentWorkspaceEmpty){
             if (state.isWorkspacesChanging) {
-                setWinLayer(config.WORKSPACE_ON_CHANGING_LAYER)
+                changeLayerSilent(config.WORKSPACE_ON_CHANGING_LAYER)
             } else {
-                setWinLayer(config.LAYER)
+                changeLayerSilent(config.LAYER)
             }   
         } else {
             if (state.isWorkspacesChanging) {
-                changeLayerTo(config.WORKSPACE_ON_CHANGING_LAYER)
+                changeLayerAnimated(config.WORKSPACE_ON_CHANGING_LAYER)
             } else {
-                changeLayerTo(config.LAYER)
+                changeLayerAnimated(config.LAYER)
             }
         }
     })
