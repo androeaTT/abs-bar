@@ -48,7 +48,6 @@ function CenterWindow({children, gdkmonitor, inState}) {
             anchor={config.VANCHOR}
         >
             <box 
-                // $={ (self) => self.add_controller(mouseController) }
                 class={ isOpaque((e) => e ? "main-content hidden" : "main-content") } 
                 overflow={Gtk.Overflow.HIDDEN} 
                 halign={Gtk.Align.CENTER} 
@@ -95,13 +94,8 @@ function CenterWindow({children, gdkmonitor, inState}) {
 
     isContainsPointerBind()
     isContainsPointerBind.subscribe(() => {
-        console.log(mouseController.containsPointer)
         setIsWindowOnTop(mouseController.containsPointer)
     })
-
-
-
-
 
     return window
 }
